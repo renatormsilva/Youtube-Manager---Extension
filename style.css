@@ -1,0 +1,19 @@
+.noAdsButton {
+    color: gold;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: blueviolet;
+    border:none;
+    border-radius: 4px
+}
+
+.newPlayer {
+    background-color: purple;
+    width: 100%;
+}
+
+.newPlayer iframe {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
