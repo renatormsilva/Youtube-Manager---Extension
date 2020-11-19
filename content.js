@@ -3,6 +3,10 @@ const interval = setInterval(()=> {
     const bellow = document.querySelector("#container")
     const playerContainer = document.querySelector("#player-container")
     const videoId = window.location.search.slice(3);
+    if(videoId.indexOf("&t=") > 1){
+        videoId = videoId.slice(0, videoId.indexOf("&t="))
+    }
+    console.log(videoId);
 
     if(bellow && playerContainer){
         console.log(bellow)
@@ -15,6 +19,7 @@ const interval = setInterval(()=> {
         newPlayer.classList.add("newPlayer");
     
         button.addEventListener("click", function(){
+            button.classList.add("changeColor");
             document.getElementById('ytd-player').remove()
             newPlayer.classList.add("newPlayer");
             newPlayer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}"</iframe> `
@@ -22,6 +27,8 @@ const interval = setInterval(()=> {
 
         
         bellow.appendChild(button)
+
+
         playerContainer.appendChild(newPlayer)
     }
 
